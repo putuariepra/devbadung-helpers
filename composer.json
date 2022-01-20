@@ -1,9 +1,6 @@
 {
     "name": "putuariepra/devbadung-helpers",
-    "description": "Service provider for helpers for Developer Diskominfo Kab. Badung",    
-    "require": {
-        "php": ">=5.6.0"
-      },
+    "description": "Service provider for helpers for Developer Diskominfo Kab. Badung",        
     "authors": [
         {
             "name": "putuariepra",
@@ -12,6 +9,22 @@
     ],
     "minimum-stability": "beta",
     "autoload": {
-        "psr-4": {"DevBadungHelper\\": "src/"}
+        "psr-4": {"DevbadungHelper\\": "src/"}
+    },
+    "require": {
+        "php": ">=7.0.0",        
+        "laravel/framework": ">=5.5"
+    },
+    "require-dev": {
+        "laravel/laravel": ">=5.5"        
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "DevbadungHelper\\DevbadungHelperServiceProvider"
+            ],
+            "aliases": {                
+            }
+        }
     }
 }
