@@ -14,6 +14,10 @@ class DevbadungHelperServiceProvider extends ServiceProvider
     public function register()
     {
         //
+        $this->mergeConfigFrom(
+            __DIR__.'/../config/devbadunghelpers.php', 'devbadung-helper-config'
+        );
+        
         $this->registerHelpers();
     }
 
