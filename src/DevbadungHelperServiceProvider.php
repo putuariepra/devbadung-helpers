@@ -15,9 +15,9 @@ class DevbadungHelperServiceProvider extends ServiceProvider
     {
         //
         $this->mergeConfigFrom(
-            __DIR__.'/../config/devbadunghelpers.php', 'devbadung-helper-config'
+            __DIR__.'/../config/devbadunghelpers.php', 'devbadunghelpers'
         );
-        
+
         $this->registerHelpers();
     }
 
@@ -35,7 +35,7 @@ class DevbadungHelperServiceProvider extends ServiceProvider
     protected function registerPublishing()
     {
         if ($this->app->runningInConsole()) {
-            $this->publishes([__DIR__.'/../config' => config_path()], 'devbadung-helper-config');
+            $this->publishes([__DIR__.'/../config' => config_path()], 'devbadunghelpers');
         }
     }
 
